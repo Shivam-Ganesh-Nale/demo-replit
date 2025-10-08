@@ -498,11 +498,11 @@ def fetch_live_commodity_prices():
 # Run Server
 if __name__ == "__main__":
     print("\n" + "=" * 60)
-    print("🎯 Starting Flask Server...")
+    print("🎯 Starting Flask Backend Server...")
     print("=" * 60)
-    print("📡 Server URL: http://127.0.0.1:5000")
+    print("📡 Server URL: http://127.0.0.1:5001")
     print("🌐 CORS: Enabled for all origins")
     print("=" * 60)
-    print("\n✅ Server is ready! Open your browser and check the console.\n")
+    print("\n✅ Backend server is ready!\n")
     
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="127.0.0.1", port=5001, debug=True)
