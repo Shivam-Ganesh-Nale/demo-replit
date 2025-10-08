@@ -1,0 +1,1026 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisan Mitra</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header id="header">
+        <span id="location"><i class="fas fa-map-marker-alt"></i></span>
+    </header>
+
+    <main>
+        <section id="home-page" class="page active">
+            <div class="weather-card">
+                <i class="fas fa-sun"></i>
+                <div>
+                    <h2>28°C</h2>
+                    <p>Sunny & Clear</p>
+                </div>
+            </div>
+
+            <div class="card weather-forecast">
+                <div class="weather-item">
+                    <p>Tomorrow</p>
+                    <i class="fas fa-cloud"></i>
+                    <p>25°C</p>
+                </div>
+                <div class="weather-item">
+                    <p>Sunday</p>
+                    <i class="fas fa-cloud-sun"></i>
+                    <p>26°C</p>
+                </div>
+                <div class="weather-item">
+                    <p>Monday</p>
+                    <i class="fas fa-sun"></i>
+                    <p>30°C</p>
+                </div>
+            </div>
+
+            <div class="card clickable" onclick="showPage('crop-suggestions-page')">
+                <div class="crop-suggestion">
+                    <div class="icon-container green-bg"><i class="fas fa-seedling"></i></div>
+                    <div class="content">
+                        <h3>What to grow now?</h3>
+                        <p>Paddy is suitable this week</p>
+                        <small>Perfect weather & soil conditions</small>
+                    </div>
+                    <button class="view-details-btn">View Details</button>
+                </div>
+            </div>
+
+            <h3 class="section-title">Quick Actions</h3>
+            <div class="quick-actions">
+                <div class="action-item clickable" onclick="showPage('crop-suggestions-page')">
+                    <div class="icon-container"><i class="fas fa-leaf"></i></div>
+                    <span>Crop Advisory</span>
+                </div>
+                <div class="action-item clickable" onclick="showPage('pest-disease-page')">
+                    <div class="icon-container red-bg"><i class="fas fa-bug"></i></div>
+                    <span>Pest & Disease</span>
+                </div>
+                <div class="action-item clickable" onclick="showPage('irrigation-page')">
+                    <div class="icon-container blue-bg"><i class="fas fa-water"></i></div>
+                    <span>Irrigation</span>
+                </div>
+                <div class="action-item clickable" onclick="showPage('farm-report-page')">
+                    <div class="icon-container purp-bg"><i class="fas fa-chart-line"></i></div>
+                    <span>Farm Report</span>
+                </div>
+            </div>
+
+            <h3 class="section-title">Market Trends</h3>
+            <div class="card clickable non-functional">
+                <div class="market-trend-item">
+                    <img src="wheat.jpg" alt="Wheat icon">
+                    <p>Wheat</p>
+                    <span>₹2,850/quintal</span>
+                    <span class="change up"><i class="fas fa-caret-up"></i> 2.1%</span>
+                </div>
+                <div class="market-trend-item">
+                    <img src="rice.jpg" alt="Rice icon">
+                    <p>Rice</p>
+                    <span>₹3,200/quintal</span>
+                    <span class="change up"><i class="fas fa-caret-up"></i> 2.1%</span>
+                </div>
+                <div class="market-trend-item">
+                    <img src="maize.jpg" alt="Maize icon">
+                    <p>Maize</p>
+                    <span>₹2,100/quintal</span>
+                    <span class="change up"><i class="fas fa-caret-up"></i> 2.1%</span>
+                </div>
+                <div class="market-trend-item">
+                    <img src="sugarcane.jpg" alt="Sugarcane icon">
+                    <p>Sugarcane</p>
+                    <span>₹380/quintal</span>
+                    <span class="change up"><i class="fas fa-caret-up"></i> 2.1%</span>
+                </div>
+            </div>
+
+            <h3 class="section-title">Today's Farming Tip</h3>
+            <div class="card farming-tip">
+                <div class="tip-icon"><i class="fas fa-lightbulb"></i></div>
+                <div class="tip-content">
+                    <h4>Today's Farming Tip</h4>
+                    <p>Morning hours (6-10 AM) are ideal for pesticide application. Lower temperatures reduce evaporation and improve effectiveness.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="crop-suggestions-page" class="page">
+            <h2 class="page-title">Crop Suggestions</h2>
+            <p class="page-subtitle">Best Crops for Your Land</p>
+            <p class="page-subtext">Based on your soil analysis and local conditions</p>
+
+            <div class="card crop-suggestion-card">
+                <div class="crop-header">
+                    <img src="wheat.jpg" alt="Wheat icon">
+                    <h3>Wheat</h3>
+                    <div class="rating"><i class="fas fa-star"></i> 4.8</div>
+                </div>
+                <div class="crop-details">
+                    <span class="badge season">Winter</span>
+                    <span class="badge difficulty">Easy</span>
+                </div>
+                <div class="crop-stats">
+                    <div class="stat-item">
+                        <p>Expected Yield</p>
+                        <span>25-30 quintal/acre</span>
+                    </div>
+                    <div class="stat-item">
+                        <p>Profit Range</p>
+                        <span>₹45,000-60,000</span>
+                    </div>
+                </div>
+                <button class="why-btn"><i class="fas fa-question-circle"></i> Why this crop?</button>
+            </div>
+
+            <div class="card crop-suggestion-card">
+                <div class="crop-header">
+                    <img src="maize.jpg" alt="Maize icon">
+                    <h3>Maize</h3>
+                    <div class="rating"><i class="fas fa-star"></i> 4.5</div>
+                </div>
+                <div class="crop-details">
+                    <span class="badge season">Summer</span>
+                    <span class="badge difficulty">Medium</span>
+                </div>
+                <div class="crop-stats">
+                    <div class="stat-item">
+                        <p>Expected Yield</p>
+                        <span>20-25 quintal/acre</span>
+                    </div>
+                    <div class="stat-item">
+                        <p>Profit Range</p>
+                        <span>₹35,000-50,000</span>
+                    </div>
+                </div>
+                <button class="why-btn"><i class="fas fa-question-circle"></i> Why this crop?</button>
+            </div>
+
+            <div class="card crop-suggestion-card">
+                <div class="crop-header">
+                    <img src="rice.jpg" alt="Rice icon">
+                    <h3>Rice</h3>
+                    <div class="rating"><i class="fas fa-star"></i> 4.2</div>
+                </div>
+                <div class="crop-details">
+                    <span class="badge season">Monsoon</span>
+                    <span class="badge difficulty">Hard</span>
+                </div>
+                <div class="crop-stats">
+                    <div class="stat-item">
+                        <p>Expected Yield</p>
+                        <span>30-35 quintal/acre</span>
+                    </div>
+                    <div class="stat-item">
+                        <p>Profit Range</p>
+                        <span>₹50,000-70,000</span>
+                    </div>
+                </div>
+                <button class="why-btn"><i class="fas fa-question-circle"></i> Why this crop?</button>
+            </div>
+        </section>
+
+        <section id="pest-disease-page" class="page">
+            <h2 class="page-title">Pest & Disease</h2>
+            <div class="card">
+                <h3>Diagnose a Problem</h3>
+                <p>Your uploaded photo is ready for analysis:</p>
+                <img src="wheat.jpg" alt="Uploaded plant image for diagnosis" style="width:100%; border-radius: 8px; margin-top: 15px; border: 1px solid #ddd;">
+                <div class="action-options" style="margin-top: 20px;">
+                    <button class="full-btn"><i class="fas fa-camera"></i> Scan New Photo</button>
+                    <button class="full-btn"><i class="fas fa-keyboard"></i> Describe Your Problem</button>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Analysis Results:</h3>
+                <p><strong>Diagnosis:</strong> Early Blight</p>
+                <p><strong>Severity:</strong> Medium</p>
+                <p><strong>Recommended Action:</strong></p>
+                <ul>
+                    <li>Remove affected leaves.</li>
+                    <li>Apply a copper-based fungicide every 7-10 days.</li>
+                    <li>Improve air circulation around the plant.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="irrigation-page" class="page">
+            <h2 class="page-title">Irrigation Advisory</h2>
+            <div class="card">
+                <h3>Wheat</h3>
+                <p><strong>Irrigation Times:</strong> 3-4 times during the growing season.</p>
+                <p><strong>Irrigation Limit:</strong> Approximately 400-600 mm of water.</p>
+            </div>
+            <div class="card">
+                <h3>Maize</h3>
+                <p><strong>Irrigation Times:</strong> 5-6 times, especially during silking and tasseling.</p>
+                <p><strong>Irrigation Limit:</strong> Approximately 500-800 mm of water.</p>
+            </div>
+            <div class="card">
+                <h3>Rice (Paddy)</h3>
+                <p><strong>Irrigation Times:</strong> Continuous flooding during tillering to panicle initiation.</p>
+                <p><strong>Irrigation Limit:</strong> Approximately 1000-1500 mm of water.</p>
+            </div>
+        </section>
+
+        <section id="farm-report-page" class="page">
+            <h2 class="page-title">Farm Reports</h2>
+            <div class="card">
+                <h3>Generate a New Report</h3>
+                <button class="full-btn">Make a Report</button>
+            </div>
+            <div class="card">
+                <h3>Report Options (Demo)</h3>
+                <p><strong>Report Title:</strong> My Farm Report Q3 2024</p>
+                <p><strong>Crop Name:</strong> Wheat</p>
+                <p><strong>Disease Noted:</strong> None</p>
+                <p><strong>Yield:</strong> 28 quintal/acre</p>
+            </div>
+        </section>
+
+        <section id="market-trends-page" class="page">
+            <h2 class="page-title">Market Trends</h2>
+            <div class="card price-table">
+                <h3>Weekly Trends</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Crop</th>
+                            <th>Today</th>
+                            <th>7 Days Ago</th>
+                            <th>Change</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="wheat.jpg" alt="Wheat"> Wheat</td>
+                            <td>₹2,850</td>
+                            <td>₹2,700</td>
+                            <td class="up"><i class="fas fa-caret-up"></i> +2.1%</td>
+                        </tr>
+                        <tr>
+                            <td><img src="rice.jpg" alt="Rice"> Rice</td>
+                            <td>₹3,200</td>
+                            <td>₹3,050</td>
+                            <td class="up"><i class="fas fa-caret-up"></i> +2.1%</td>
+                        </tr>
+                        <tr>
+                            <td><img src="maize.jpg" alt="Maize"> Maize</td>
+                            <td>₹2,100</td>
+                            <td>₹1,950</td>
+                            <td class="up"><i class="fas fa-caret-up"></i> +2.1%</td>
+                        </tr>
+                        <tr>
+                            <td><img src="sugarcane.jpg" alt="Sugarcane"> Sugarcane</td>
+                            <td>₹380</td>
+                            <td>₹230</td>
+                            <td class="up"><i class="fas fa-caret-up"></i> +2.1%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <button class="full-btn">Set Price Alerts</button>
+            <button class="full-btn">View Market Analysis</button>
+        </section>
+
+        <section id="scan-page" class="page">
+            <h2 class="page-title">Scan</h2>
+            <div class="card">
+                <p>This feature requires camera access.</p>
+                <p>A popup would appear here asking for camera permissions.</p>
+                <button class="full-btn"><i class="fas fa-camera"></i> Scan Now</button>
+            </div>
+        </section>
+
+        <section id="ai-chat-page" class="page">
+            <h2 class="page-title">AI Chat</h2>
+            <div class="card">
+                <p>Hi! How can I help you with your farming today?</p>
+                <div class="chat-input-container">
+                    <input type="text" placeholder="Type your question..." disabled>
+                    <button disabled><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Common Questions:</h3>
+                <ul>
+                    <li>How to control pests on my tomato plants?</li>
+                    <li>What fertilizer should I use for wheat?</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="profile-page" class="page">
+            <h2 class="page-title">My Profile</h2>
+            <div class="user-stats">
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-seedling"></i></div>
+                    <p>2.5 acres</p>
+                    <small>Farm Size</small>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-cubes"></i></div>
+                    <p>8 varieties</p>
+                    <small>Crops Grown</small>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <p>12 years</p>
+                    <small>Years Farming</small>
+                </div>
+            </div>
+
+            <h3 class="section-title">Achievements</h3>
+            <div class="card achievement-card">
+                <div class="achievement-item">
+                    <div class="icon"><i class="fas fa-award"></i></div>
+                    <div class="details">
+                        <h4>Smart Farmer</h4>
+                        <p>Used AI recommendations 50 times</p>
+                    </div>
+                    <span class="earned-badge">Earned</span>
+                </div>
+                <div class="achievement-item">
+                    <div class="icon"><i class="fas fa-seedling"></i></div>
+                    <div class="details">
+                        <h4>Crop Expert</h4>
+                        <p>Successfully grew 5 different crops</p>
+                    </div>
+                    <span class="earned-badge">Earned</span>
+                </div>
+                <div class="achievement-item">
+                    <div class="icon"><i class="fas fa-chart-bar"></i></div>
+                    <div class="details">
+                        <h4>Data Driven</h4>
+                        <p>Tracked farm data for 6 months</p>
+                    </div>
+                    <span class="earned-badge">Earned</span>
+                </div>
+            </div>
+
+            <h3 class="section-title">Recent Activity</h3>
+            <div class="card activity-card">
+                <div class="activity-item">
+                    <div class="icon"><i class="fas fa-leaf"></i></div>
+                    <div class="details">
+                        <h4>Wheat planting advice requested</h4>
+                        <small>2 hours ago</small>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="icon"><i class="fas fa-camera"></i></div>
+                    <div class="details">
+                        <h4>Tomato leaf scan completed</h4>
+                        <small>1 day ago</small>
+                    </div>
+                </div>
+                <div class="activity-item">
+                    <div class="icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="details">
+                        <h4>Market prices checked</h4>
+                        <small>2 days ago</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <nav class="bottom-nav">
+        <a href="#" class="nav-item active" data-page="home-page">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="#" class="nav-item" data-page="market-trends-page">
+            <i class="fas fa-chart-line"></i>
+            <span>Market</span>
+        </a>
+        <a href="#" class="nav-item" data-page="scan-page">
+            <div class="scan-btn"><i class="fas fa-camera"></i></div>
+        </a>
+        <a href="#" class="nav-item" data-page="ai-chat-page">
+            <i class="fas fa-robot"></i>
+            <span>AI Chat</span>
+        </a>
+        <a href="#" class="nav-item" data-page="profile-page">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+        </a>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisan Mitra</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+
+    <header id="header">
+        <span id="location"><i class="fas fa-map-marker-alt"></i></span>
+    </header>
+
+    <main>
+        <section id="auth-page" class="page active">
+            <div class="card auth-container">
+                <h2>Welcome to Kisan Mitra</h2>
+                <p>Login or Sign Up to continue</p>
+
+                <div id="g_id_onload"
+                    data-client_id="798752128190-5iqgt0mi6hf4r8tn8pg9n3tf66m0hd7g.apps.googleusercontent.com"
+                    data-callback="handleCredentialResponse">
+                </div>
+                <div class="g_id_signin" data-type="standard"></div>
+
+                <div class="divider">
+                    <hr>
+                    <span>OR</span>
+                    <hr>
+                </div>
+
+                <form id="signup-form">
+                    <input type="text" id="name" placeholder="Enter your Name" required>
+                    <input type="tel" id="mobile" placeholder="Enter your Mobile Number" required>
+                    <button class="full-btn" type="submit">Sign Up</button>
+                </form>
+            </div>
+        </section>
+
+       <section id="home-page" class="page">
+  <div class="weather-card">
+    <i class="fas fa-sun"></i>
+    <div>
+      <h2 id="weather-temp">28°C</h2>
+      <p id="weather-condition">Sunny & Clear</p>
+    </div>
+  </div>
+
+  <div class="card weather-forecast">
+    <div class="weather-item">
+  <p>Tomorrow</p>
+  <i class="fas fa-cloud"></i>
+  <p id="weather-temp-tomorrow">25°C</p>
+</div>
+<div class="weather-item">
+  <p>Day 2</p>
+  <i class="fas fa-cloud-sun"></i>
+  <p id="weather-temp-day2">26°C</p>
+</div>
+<div class="weather-item">
+  <p>Day 3</p>
+  <i class="fas fa-sun"></i>
+  <p id="weather-temp-day3">30°C</p>
+</div>
+
+  </div>
+</section>
+
+
+            <div class="card clickable" onclick="showPage('crop-suggestions-page')">
+                <div class="crop-suggestion">
+                    <div class="icon-container green-bg"><i class="fas fa-seedling"></i></div>
+                    <div class="content">
+                        <h3>What to grow now?</h3>
+                        <p>Paddy is suitable this week</p>
+                        <small>Perfect weather & soil conditions</small>
+                    </div>
+                    <button class="view-details-btn">View Details</button>
+                </div>
+            </div>
+
+            <h3 class="section-title">Quick Actions</h3>
+            <div class="quick-actions">
+                <div class="action-item clickable" onclick="showPage('crop-suggestions-page')">
+                    <div class="icon-container"><i class="fas fa-leaf"></i></div>
+                    <span>Crop Advisory</span>
+                </div>
+                <div class="action-item clickable" onclick="showPage('pest-disease-page')">
+                    <div class="icon-container red-bg"><i class="fas fa-bug"></i></div>
+                    <span>Pest & Disease</span>
+                </div>
+                <div class="action-item clickable" onclick="showPage('irrigation-page')">
+                    <div class="icon-container blue-bg"><i class="fas fa-water"></i></div>
+                    <span>Irrigation</span>
+                </div>
+                <div class="action-item clickable" onclick="showPage('farm-report-page')">
+                    <div class="icon-container purp-bg"><i class="fas fa-chart-line"></i></div>
+                    <span>Farm Report</span>
+                </div>
+            </div>
+
+            <h3 class="section-title">Market Trends</h3>
+            <div class="card clickable non-functional">
+                <div class="market-trend-item">
+                    <img src="wheat.jpg" alt="Wheat icon">
+                    <p>Wheat</p>
+                    <span>₹2,850/quintal</span>
+                    <span class="change up"><i class="fas fa-caret-up"></i> 2.1%</span>
+                </div>
+                <div class="market-trend-item">
+                    <img src="rice.jpg" alt="Rice icon">
+                    <p>Rice</p>
+                    <span>₹3,200/quintal</span>
+                    <span class="change up"><i class="fas fa-caret-up"></i> 2.1%</span>
+                </div>
+                <div class="market-trend-item">
+                    <img src="maize.jpg" alt="Maize icon">
+                    <p>Maize</p>
+                    <span>₹2,100/quintal</span>
+                    <span class="change up"><i class="fas fa-caret-up"></i> 2.1%</span>
+                </div>
+                <div class="market-trend-item">
+                    <img src="sugarcane.jpg" alt="Sugarcane icon">
+                    <p>Sugarcane</p>
+                    <span>₹380/quintal</span>
+                    <span class="change up"><i class="fas fa-caret-up"></i> 2.1%</span>
+                </div>
+            </div>
+
+            <h3 class="section-title">Today's Farming Tip</h3>
+            <div class="card farming-tip">
+                <div class="tip-icon"><i class="fas fa-lightbulb"></i></div>
+                <div class="tip-content">
+                    <h4>Today's Farming Tip</h4>
+                    <p>Morning hours (6-10 AM) are ideal for pesticide application. Lower temperatures reduce evaporation and improve effectiveness.</p>
+                </div>
+            </div>
+
+        </section>
+
+        </main>
+
+    <nav class="bottom-nav">
+        <a href="#" class="nav-item active" data-page="home-page">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="#" class="nav-item" data-page="market-trends-page">
+            <i class="fas fa-chart-line"></i>
+            <span>Market</span>
+        </a>
+        <a href="#" class="nav-item" data-page="scan-page">
+            <div class="scan-btn"><i class="fas fa-camera"></i></div>
+        </a>
+        <a href="#" class="nav-item" data-page="ai-chat-page">
+            <i class="fas fa-robot"></i>
+            <span>AI Chat</span>
+        </a>
+        <a href="#" class="nav-item" data-page="profile-page">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+        </a>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisan Mitra</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header id="header">
+        <span id="location"><i class="fas fa-map-marker-alt"></i></span>
+    </header>
+
+    <main>
+        <!-- Authentication Page -->
+        <section id="auth-page" class="page active">
+            <div class="card auth-container">
+                <h2>Welcome to Kisan Mitra</h2>
+                <p>Sign Up to continue</p>
+
+                <form id="signup-form">
+                    <input type="text" id="name" placeholder="Enter your Name" required>
+                    <input type="tel" id="mobile" placeholder="Enter your Mobile Number" pattern="[0-9]{10}" maxlength="10" required>
+                    <button class="full-btn" type="submit">Sign Up</button>
+                </form>
+
+                <div class="divider">
+                    <hr>
+                    <span>Already have an account?</span>
+                    <hr>
+                </div>
+
+                <button class="full-btn secondary-btn" type="button" id="show-login-btn">Login</button>
+            </div>
+
+            <!-- Login Form (Hidden by default) -->
+            <div class="card auth-container" id="login-container" style="display: none;">
+                <h2>Welcome Back!</h2>
+                <p>Login to continue</p>
+
+                <form id="login-form">
+                    <input type="tel" id="login-mobile" placeholder="Enter your Mobile Number" pattern="[0-9]{10}" maxlength="10" required>
+                    <button class="full-btn" type="submit">Login</button>
+                </form>
+
+                <div class="divider">
+                    <hr>
+                    <span>Don't have an account?</span>
+                    <hr>
+                </div>
+
+                <button class="full-btn secondary-btn" type="button" id="show-signup-btn">Sign Up</button>
+            </div>
+        </section>
+
+        <!-- Profile Collection Page -->
+        <section id="profile-collect-page" class="page">
+            <div class="card auth-container">
+                <h2>Complete Your Profile</h2>
+                <p>Tell us more to get personalized crop advice.</p>
+
+                <form id="profile-collect-form">
+                    <h3>Personal Details</h3>
+                    <input type="number" id="age" placeholder="Age" min="18" max="100" required>
+                    <input type="text" id="location_manual" placeholder="Current Location (City/Town)" required>
+
+                    <h3>Farm Details</h3>
+                    <input type="text" id="farm_name" placeholder="Farm Name (Optional)">
+                    <input type="text" id="farm_size" placeholder="Farm Size (e.g., 2.5 acres)" required>
+                    <input type="text" id="crop_history" placeholder="Crop History (e.g., Wheat, Rice)" required>
+                    <input type="text" id="soil_type" placeholder="Soil Type (e.g., Alluvial, Clay)" required>
+                    <input type="text" id="irrigation_source" placeholder="Irrigation Source (e.g., Well, Canal)">
+
+                    <button class="full-btn" type="submit">Save and Continue to App</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Home Page -->
+        <section id="home-page" class="page">
+            <div class="card weather-card">
+                <i class="fas fa-sun" id="weather-icon"></i>
+                <div>
+                    <h2 id="weather-temp">28°C</h2>
+                    <p id="weather-condition">Sunny & Clear</p>
+                </div>
+            </div>
+
+            <div class="card weather-forecast">
+                <div class="weather-item">
+                    <p>Tomorrow</p>
+                    <i class="fas fa-cloud"></i>
+                    <p id="weather-temp-tomorrow">25°C</p>
+                </div>
+                <div class="weather-item">
+                    <p>Day 2</p>
+                    <i class="fas fa-cloud-sun"></i>
+                    <p id="weather-temp-day2">26°C</p>
+                </div>
+                <div class="weather-item">
+                    <p>Day 3</p>
+                    <i class="fas fa-sun"></i>
+                    <p id="weather-temp-day3">30°C</p>
+                </div>
+            </div>
+
+            <div class="card clickable" onclick="showPage('crop-suggestions-page')">
+                <div class="crop-suggestion">
+                    <div class="icon-container green-bg"><i class="fas fa-seedling"></i></div>
+                    <div class="content">
+                        <h3>What to grow now?</h3>
+                        <p>Paddy is suitable this week</p>
+                        <small>Perfect weather & soil conditions</small>
+                    </div>
+                    <button class="view-details-btn" type="button">View Details</button>
+                </div>
+            </div>
+
+            <h3 class="section-title">Quick Actions</h3>
+            <div class="quick-actions">
+                <div class="action-item clickable" onclick="showPage('crop-suggestions-page')">
+                    <div class="icon-container"><i class="fas fa-leaf"></i></div>
+                    <span>Crop Advisory</span>
+                </div>
+                <div class="action-item clickable" onclick="showPage('pest-disease-page')">
+                    <div class="icon-container red-bg"><i class="fas fa-bug"></i></div>
+                    <span>Pest & Disease</span>
+                </div>
+                <div class="action-item clickable" onclick="showPage('irrigation-page')">
+                    <div class="icon-container blue-bg"><i class="fas fa-water"></i></div>
+                    <span>Irrigation</span>
+                </div>
+                <div class="action-item clickable" onclick="showPage('farm-report-page')">
+                    <div class="icon-container purp-bg"><i class="fas fa-chart-line"></i></div>
+                    <span>Farm Report</span>
+                </div>
+            </div>
+
+            <h3 class="section-title">Market Trends</h3>
+            <div class="card clickable non-functional">
+                <div class="market-trend-item">
+                    <img src="image_e738e6.jpg" alt="Wheat icon">
+                    <p>Wheat</p>
+                    <span>₹2,850/quintal</span>
+                    <span class="change up"><i class="fas fa-caret-up"></i> 2.1%</span>
+                </div>
+                <div class="market-trend-item">
+                    <img src="image_e73928.jpg" alt="Rice icon">
+                    <p>Rice</p>
+                    <span>₹3,200/quintal</span>
+                    <span class="change up"><i class="fas fa-caret-up"></i> 2.1%</span>
+                </div>
+            </div>
+
+            <h3 class="section-title">Today's Farming Tip</h3>
+            <div class="card farming-tip">
+                <div class="tip-icon"><i class="fas fa-lightbulb"></i></div>
+                <div class="tip-content">
+                    <h4>Today's Farming Tip</h4>
+                    <p>Morning hours (6-10 AM) are ideal for pesticide application. Lower temperatures reduce evaporation and improve effectiveness.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Crop Suggestions Page -->
+        <section id="crop-suggestions-page" class="page">
+            <h2 class="page-title">Crop Suggestions</h2>
+            <p class="page-subtitle">Best Crops for Your Land</p>
+            <p class="page-subtext">Based on your soil analysis and local conditions</p>
+
+            <div class="card crop-suggestion-card">
+                <div class="crop-header">
+                    <img src="image_e738e6.jpg" alt="Wheat icon">
+                    <h3>Wheat</h3>
+                    <div class="rating"><i class="fas fa-star"></i> 4.8</div>
+                </div>
+                <div class="crop-details">
+                    <span class="badge season">Winter</span>
+                    <span class="badge difficulty">Easy</span>
+                </div>
+                <div class="crop-stats">
+                    <div class="stat-item">
+                        <p>Expected Yield</p>
+                        <span>25-30 quintal/acre</span>
+                    </div>
+                    <div class="stat-item">
+                        <p>Profit Range</p>
+                        <span>₹45,000-60,000</span>
+                    </div>
+                </div>
+                <button class="why-btn" type="button"><i class="fas fa-question-circle"></i> Why this crop?</button>
+            </div>
+
+            <div class="card crop-suggestion-card">
+                <div class="crop-header">
+                    <img src="image_e73c0b.jpg" alt="Maize icon">
+                    <h3>Maize</h3>
+                    <div class="rating"><i class="fas fa-star"></i> 4.5</div>
+                </div>
+                <div class="crop-details">
+                    <span class="badge season">Summer</span>
+                    <span class="badge difficulty">Medium</span>
+                </div>
+                <div class="crop-stats">
+                    <div class="stat-item">
+                        <p>Expected Yield</p>
+                        <span>20-25 quintal/acre</span>
+                    </div>
+                    <div class="stat-item">
+                        <p>Profit Range</p>
+                        <span>₹35,000-50,000</span>
+                    </div>
+                </div>
+                <button class="why-btn" type="button"><i class="fas fa-question-circle"></i> Why this crop?</button>
+            </div>
+
+            <div class="card crop-suggestion-card">
+                <div class="crop-header">
+                    <img src="image_e73928.jpg" alt="Rice icon">
+                    <h3>Rice</h3>
+                    <div class="rating"><i class="fas fa-star"></i> 4.2</div>
+                </div>
+                <div class="crop-details">
+                    <span class="badge season">Monsoon</span>
+                    <span class="badge difficulty">Hard</span>
+                </div>
+                <div class="crop-stats">
+                    <div class="stat-item">
+                        <p>Expected Yield</p>
+                        <span>30-35 quintal/acre</span>
+                    </div>
+                    <div class="stat-item">
+                        <p>Profit Range</p>
+                        <span>₹50,000-70,000</span>
+                    </div>
+                </div>
+                <button class="why-btn" type="button"><i class="fas fa-question-circle"></i> Why this crop?</button>
+            </div>
+        </section>
+
+        <!-- Pest & Disease Page -->
+        <section id="pest-disease-page" class="page">
+            <h2 class="page-title">Pest & Disease</h2>
+            <div class="card">
+                <h3>Diagnose a Problem</h3>
+                <p>Your uploaded photo is ready for analysis:</p>
+                <img src="image_e738e6.jpg" alt="Uploaded plant image for diagnosis" style="width:100%; border-radius: 8px; margin-top: 15px; border: 1px solid #ddd;">
+                <div class="action-options" style="margin-top: 20px;">
+                    <button class="full-btn" type="button"><i class="fas fa-camera"></i> Scan New Photo</button>
+                    <button class="full-btn" type="button"><i class="fas fa-keyboard"></i> Describe Your Problem</button>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Analysis Results:</h3>
+                <p><strong>Diagnosis:</strong> Early Blight</p>
+                <p><strong>Severity:</strong> Medium</p>
+                <p><strong>Recommended Action:</strong></p>
+                <ul>
+                    <li>Remove affected leaves.</li>
+                    <li>Apply a copper-based fungicide every 7-10 days.</li>
+                    <li>Improve air circulation around the plant.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Irrigation Page -->
+        <section id="irrigation-page" class="page">
+            <h2 class="page-title">Irrigation Advisory</h2>
+            <div class="card">
+                <h3>Wheat</h3>
+                <p><strong>Irrigation Times:</strong> 3-4 times during the growing season.</p>
+                <p><strong>Irrigation Limit:</strong> Approximately 400-600 mm of water.</p>
+            </div>
+            <div class="card">
+                <h3>Maize</h3>
+                <p><strong>Irrigation Times:</strong> 5-6 times, especially during silking and tasseling.</p>
+                <p><strong>Irrigation Limit:</strong> Approximately 500-800 mm of water.</p>
+            </div>
+            <div class="card">
+                <h3>Rice (Paddy)</h3>
+                <p><strong>Irrigation Times:</strong> Continuous flooding during tillering to panicle initiation.</p>
+                <p><strong>Irrigation Limit:</strong> Approximately 1000-1500 mm of water.</p>
+            </div>
+        </section>
+
+        <!-- Farm Report Page -->
+        <section id="farm-report-page" class="page">
+            <h2 class="page-title">Farm Reports</h2>
+            <div class="card">
+                <h3>Generate a New Report</h3>
+                <button class="full-btn" type="button">Make a Report</button>
+            </div>
+            <div class="card">
+                <h3>Report Options (Demo)</h3>
+                <p><strong>Report Title:</strong> My Farm Report Q3 2024</p>
+                <p><strong>Crop Name:</strong> Wheat</p>
+                <p><strong>Disease Noted:</strong> None</p>
+                <p><strong>Yield:</strong> 28 quintal/acre</p>
+            </div>
+        </section>
+
+        <!-- Market Trends Page -->
+        <section id="market-trends-page" class="page">
+            <h2 class="page-title">Market Trends</h2>
+            <div class="card price-table">
+                <h3>Weekly Trends</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Crop</th>
+                            <th>Today</th>
+                            <th>7 Days Ago</th>
+                            <th>Change</th>
+                        </tr>
+                    </thead>
+                    <tbody id="market-data-table">
+                        <tr>
+                            <td colspan="4" style="text-align:center; color:gray;">Loading market data...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <button class="full-btn" type="button">Set Price Alerts</button>
+            <button class="full-btn" type="button">View Market Analysis</button>
+        </section>
+
+        <!-- Scan Page -->
+        <section id="scan-page" class="page">
+            <h2 class="page-title">Scan</h2>
+            <div class="card">
+                <p>This feature requires camera access.</p>
+                <p>A popup would appear here asking for camera permissions.</p>
+                <button class="full-btn" type="button"><i class="fas fa-camera"></i> Scan Now</button>
+            </div>
+        </section>
+
+        <!-- AI Chat Page -->
+        <section id="ai-chat-page" class="page">
+            <h2 class="page-title">AI Chat</h2>
+            <div class="card">
+                <p>Hi! How can I help you with your farming today?</p>
+                <div class="chat-input-container">
+                    <input type="text" placeholder="Type your question..." disabled>
+                    <button disabled type="button"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Common Questions:</h3>
+                <ul>
+                    <li>How to control pests on my tomato plants?</li>
+                    <li>What fertilizer should I use for wheat?</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Profile Page -->
+        <section id="profile-page" class="page">
+            <h2 class="page-title">My Profile</h2>
+
+            <div class="card user-stats">
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-seedling"></i></div>
+                    <p id="profile-farm-size-display">2.5 acres</p>
+                    <small>Farm Size</small>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-cubes"></i></div>
+                    <p>8 varieties</p>
+                    <small>Crops Grown</small>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <p>12 years</p>
+                    <small>Years Farming</small>
+                </div>
+            </div>
+
+            <div class="card profile-section">
+                <h3>Personal Details</h3>
+                <p><strong>Name:</strong> <span id="profile-name">—</span></p>
+                <p><strong>Age:</strong> <span id="profile-age">—</span></p>
+                <p><strong>Mobile:</strong> <span id="profile-mobile">—</span></p>
+                <p><strong>Location:</strong> <span id="profile-location">—</span></p>
+            </div>
+
+            <div class="card profile-section">
+                <h3>Farm Details</h3>
+                <p><strong>Farm Name:</strong> <span id="profile-farm-name">—</span></p>
+                <p><strong>Farm Size:</strong> <span id="profile-farm-size">—</span></p>
+                <p><strong>Crop History:</strong> <span id="profile-crop-history">—</span></p>
+                <p><strong>Soil Type:</strong> <span id="profile-soil">—</span></p>
+                <p><strong>Irrigation Source:</strong> <span id="profile-irrigation">—</span></p>
+            </div>
+
+            <div class="card profile-section">
+                <h3>Account</h3>
+                <button class="full-btn" type="button" onclick="logoutUser()">Logout</button>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="#" class="nav-item active" data-page="home-page">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="#" class="nav-item" data-page="market-trends-page">
+            <i class="fas fa-chart-line"></i>
+            <span>Market</span>
+        </a>
+        <a href="#" class="nav-item" data-page="scan-page">
+            <div class="scan-btn"><i class="fas fa-camera"></i></div>
+        </a>
+        <a href="#" class="nav-item" data-page="ai-chat-page">
+            <i class="fas fa-robot"></i>
+            <span>AI Chat</span>
+        </a>
+        <a href="#" class="nav-item" data-page="profile-page">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+        </a>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
