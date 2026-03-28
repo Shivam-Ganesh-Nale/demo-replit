@@ -93,7 +93,7 @@
 
 // //             // Send data to the backend's /register endpoint
 // //             try {
-// //                 const response = await fetch('http://127.0.0.1:5000/register', {
+// //                 const response = await fetch('http://127.0.0.1:5001/register', {
 // //                     method: 'POST',
 // //                     headers: {
 // //                         'Content-Type': 'application/json'
@@ -202,7 +202,7 @@
 //       const mobile_number = document.getElementById("mobile").value;
 
 //       try {
-//         const response = await fetch("http://127.0.0.1:5000/register", {
+//         const response = await fetch("http://127.0.0.1:5001/register", {
 //           method: "POST",
 //           headers: {
 //             "Content-Type": "application/json",
@@ -288,7 +288,7 @@
 
 //       // Step 2: Call your weather API directly with lat/lon
 //       const response = await fetch(
-//         `http://127.0.0.1:5000/api/weather?lat=${latitude}&lon=${longitude}`
+//         `http://127.0.0.1:5001/api/weather?lat=${latitude}&lon=${longitude}`
 //       );
 //       const data = await response.json();
 //       console.log("Weather API response:", data);
@@ -517,7 +517,7 @@
 //     async function fetchDefaultWeather() {
 //         const defaultLocation = "Kanke, Ranchi-Jharkhand";
 //         try {
-//             const response = await fetch(`http://127.0.0.1:5000/api/weather?location=${encodeURIComponent(defaultLocation)}`);
+//             const response = await fetch(`http://127.0.0.1:5001/api/weather?location=${encodeURIComponent(defaultLocation)}`);
 //             const data = await response.json();
 //             if (response.ok) {
 //                 updateWeatherUI(data);
@@ -538,7 +538,7 @@
 //                     const lon = position.coords.longitude;
                     
 //                     try {
-//                         const response = await fetch(`http://127.0.0.1:5000/api/weather?lat=${lat}&lon=${lon}`);
+//                         const response = await fetch(`http://127.0.0.1:5001/api/weather?lat=${lat}&lon=${lon}`);
 //                         const data = await response.json();
 
 //                         if (response.ok) {
@@ -595,7 +595,7 @@
 //         tableBody.innerHTML = '<tr><td colspan="4" style="text-align:center; color:gray;">Loading market data...</td></tr>';
 
 //         try {
-//             const response = await fetch("http://127.0.0.1:5000/api/live_market");
+//             const response = await fetch("http://127.0.0.1:5001/api/live_market");
 //             const data = await response.json();
 
 //             if (response.ok && Array.isArray(data) && data.length > 0) {
@@ -644,7 +644,7 @@
 //         }
 
 //         try {
-//             const response = await fetch(`http://127.0.0.1:5000/profile/get/${userId}`);
+//             const response = await fetch(`http://127.0.0.1:5001/profile/get/${userId}`);
 //             const data = await response.json();
             
 //             if (response.ok) {
@@ -721,7 +721,7 @@
 
 //             try {
 //                 console.log("📡 Sending request to backend...");
-//                 const response = await fetch("http://127.0.0.1:5000/register", {
+//                 const response = await fetch("http://127.0.0.1:5001/register", {
 //                     method: "POST",
 //                     headers: { "Content-Type": "application/json" },
 //                     body: JSON.stringify({ name: name, mobile_number: mobile_number }),
@@ -744,7 +744,7 @@
 //                 }
 //             } catch (error) {
 //                 console.error("❌ Network error:", error);
-//                 alert("An error occurred. Make sure your Flask server is running at http://127.0.0.1:5000");
+//                 alert("An error occurred. Make sure your Flask server is running at http://127.0.0.1:5001");
 //             }
 //         });
 //     } else {
@@ -767,7 +767,7 @@
 
 //             try {
 //                 console.log("📡 Sending login request...");
-//                 const response = await fetch("http://127.0.0.1:5000/login", {
+//                 const response = await fetch("http://127.0.0.1:5001/login", {
 //                     method: "POST",
 //                     headers: { "Content-Type": "application/json" },
 //                     body: JSON.stringify({ mobile_number: mobile_number }),
@@ -822,7 +822,7 @@
 
 //             try {
 //                 console.log("📡 Sending profile update...");
-//                 const response = await fetch("http://127.0.0.1:5000/profile/update", {
+//                 const response = await fetch("http://127.0.0.1:5001/profile/update", {
 //                     method: "POST",
 //                     headers: { "Content-Type": "application/json" },
 //                     body: JSON.stringify(profileData),
@@ -1028,7 +1028,7 @@ function updateWeatherUI(data) {
 async function fetchDefaultWeather() {
     const defaultLocation = "Kanke, Ranchi-Jharkhand";
     try {
-        const response = await fetch(`http://127.0.0.1:5000/api/weather?location=${encodeURIComponent(defaultLocation)}`);
+        const response = await fetch(`http://127.0.0.1:5001/api/weather?location=${encodeURIComponent(defaultLocation)}`);
         const data = await response.json();
         if (response.ok) {
             updateWeatherUI(data);
@@ -1046,7 +1046,7 @@ window.fetchRealTimeLocationAndWeather = function() {
                 const lon = position.coords.longitude;
                 
                 try {
-                    const response = await fetch(`http://127.0.0.1:5000/api/weather?lat=${lat}&lon=${lon}`);
+                    const response = await fetch(`http://127.0.0.1:5001/api/weather?lat=${lat}&lon=${lon}`);
                     const data = await response.json();
 
                     if (response.ok) {
@@ -1075,7 +1075,7 @@ window.loadMarketData = async function() {
     tableBody.innerHTML = '<tr><td colspan="4" style="text-align:center; color:gray;">Loading...</td></tr>';
 
     try {
-        const response = await fetch("http://127.0.0.1:5000/api/live_market");
+        const response = await fetch("http://127.0.0.1:5001/api/live_market");
         const data = await response.json();
 
         if (response.ok && Array.isArray(data) && data.length > 0) {
@@ -1120,7 +1120,7 @@ window.loadProfile = async function() {
     }
 
     try {
-        const response = await fetch(`http://127.0.0.1:5000/profile/get/${userId}`);
+        const response = await fetch(`http://127.0.0.1:5001/profile/get/${userId}`);
         const data = await response.json();
         
         if (response.ok) {
@@ -1221,7 +1221,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             try {
                 console.log("Sending registration request to backend...");
-                const response = await fetch("http://127.0.0.1:5000/register", {
+                const response = await fetch("http://127.0.0.1:5001/register", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ name: name, mobile_number: mobile_number }),
@@ -1244,7 +1244,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             } catch (error) {
                 console.error("❌ Network error:", error);
-                alert("Error: " + error.message + "\n\nMake sure Flask server is running at http://127.0.0.1:5000");
+                alert("Error: " + error.message + "\n\nMake sure Flask server is running at http://127.0.0.1:5001");
             }
         });
     } else {
@@ -1270,7 +1270,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             try {
                 console.log("Sending login request...");
-                const response = await fetch("http://127.0.0.1:5000/login", {
+                const response = await fetch("http://127.0.0.1:5001/login", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ mobile_number: mobile_number }),
@@ -1327,7 +1327,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             try {
                 console.log("Sending profile update...");
-                const response = await fetch("http://127.0.0.1:5000/profile/update", {
+                const response = await fetch("http://127.0.0.1:5001/profile/update", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(profileData),
